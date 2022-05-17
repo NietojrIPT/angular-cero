@@ -1,0 +1,18 @@
+<p>Listado de Animes</p>
+
+<div *ngIf="animeBorrado; else noBorrado">
+  <h3>
+    Anime Borrado: <span>{{ animeBorrado }} </span>
+  </h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+<button (click)="borrarAnime()">Borrar</button>
+
+<ul>
+  <li *ngFor="let anime of animes; let i = index">{{ i + 1 }} - {{ anime }}</li>
+</ul>
