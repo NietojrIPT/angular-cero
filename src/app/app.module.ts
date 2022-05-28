@@ -5,6 +5,8 @@ import { animesModule } from './animes/animes.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContadorModule } from './contador/contador/contador.module';
+import { MainPagComponent } from './wanime/main-pag/main-pag.component';
+import { WAnimeModule } from './wanime/wanime.module';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { ContadorModule } from './contador/contador/contador.module';
     BrowserModule,
     AppRoutingModule,
     animesModule,
-    ContadorModule
+    ContadorModule,
+    WAnimeModule
 
   ],
   providers: [],

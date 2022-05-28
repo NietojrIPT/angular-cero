@@ -1,0 +1,14 @@
+<h1>Animes Nuevos</h1>
+<hr />
+
+<div class="row">
+    <app-series [seriesAnimePadre]="seriesAnime">
+    </app-series>
+
+  <div class="col">
+      <app-agregar 
+      [nuevo] = "nuevo"
+      (onNewSerie)="addNewSerie($event)"
+      ></app-agregar>
+  </div>
+</div>
