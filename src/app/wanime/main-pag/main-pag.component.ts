@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeriesAnime } from '../interfaces/animes.interface';
+import { Wanimeservice } from '../services/wanine.service';
 
 
 
@@ -10,39 +11,19 @@ import { SeriesAnime } from '../interfaces/animes.interface';
 })
 export class MainPagComponent {
 
-  seriesAnime:SeriesAnime[] = [
-  { 
-    nombre:'Violet Evergarden',
-    temporada: 2
-  },
-  { 
-    nombre:'Demon Slayer',
-    temporada: 3
-  },
-  { 
-    nombre:'Darwins Game',
-    temporada: 1
-  },
-  { 
-    nombre:'Fruits Basket',
-    temporada: 2
-  },
-  { 
-    nombre:'Sono Bisque Doll',
-    temporada: 1
-  }
-  ];
+  // seriesAnime :  SeriesAnime[] = [];
   
   nuevo: SeriesAnime = {
     nombre: 'Horimiya',
     temporada: 2
   };
 
-  addNewSerie(argument:SeriesAnime){
-    console.log(argument);
-    
-    this.seriesAnime.push(argument);
-    
+
+
+
+  constructor(){
+    // this.seriesAnime = this.wanimeservices.seriesAnime;
+
   }
 
 }

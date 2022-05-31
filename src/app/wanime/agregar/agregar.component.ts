@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SeriesAnime } from '../interfaces/animes.interface';
+import { Wanimeservice } from '../services/wanine.service';
 
 @Component({
   selector: 'app-agregar',
@@ -15,13 +16,17 @@ export class AgregarComponent  {
     temporada: 0,
   };
 
-  @Output() onNewSerie: EventEmitter<SeriesAnime> = new EventEmitter();
+  // @Output() onNewSerie: EventEmitter<SeriesAnime> = new EventEmitter();
+
+constructor(private wanimeserie: Wanimeservice){}
 
   agregar() {
     if (this.nuevo.nombre.trim().length === 0){
       return;
     }
-    this.onNewSerie.emit(this.nuevo);
+
+    this.wanimeserie.addSeries(this.nuevo)
+    // this.onNewSerie.emit(this.nuevo);
     this.nuevo = {nombre:'', temporada:0}
    
     

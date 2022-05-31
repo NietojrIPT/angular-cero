@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SeriesAnime } from '../interfaces/animes.interface';
+import { Wanimeservice } from '../services/wanine.service';
 
 @Component({
   selector: 'app-series',
@@ -8,6 +9,13 @@ import { SeriesAnime } from '../interfaces/animes.interface';
 })
 export class SeriesComponent  {
 
-  @Input() seriesAnimePadre:SeriesAnime[] = [];
+  // @Input() seriesAnimePadre:SeriesAnime[] = [];
+get seriesanime(){
+  return this.wanimeservice.seriesAnime;
+}
+
+  constructor(private wanimeservice:Wanimeservice){
+
+  }
 
 }
