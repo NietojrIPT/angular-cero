@@ -7,7 +7,6 @@ import { SeriesComponent } from './series/series.component';
 import { AgregarComponent } from './agregar/agregar.component';
 import { Wanimeservice } from './services/wanine.service';
 
-
 @NgModule({
   declarations: [
     MainPagComponent,
@@ -16,7 +15,7 @@ import { Wanimeservice } from './services/wanine.service';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
   ],
   exports:[
     MainPagComponent
@@ -24,6 +23,7 @@ import { Wanimeservice } from './services/wanine.service';
 
   providers: [
     Wanimeservice
+
   ]
 })
 export class WAnimeModule { }

@@ -12,14 +12,14 @@ import { WAnimeModule } from './wanime/wanime.module';
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     animesModule,
     ContadorModule,
-    WAnimeModule
+    WAnimeModule,
+    
 
   ],
   providers: [],
